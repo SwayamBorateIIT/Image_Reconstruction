@@ -13,44 +13,40 @@ minima is obtained by using normal equation.
 Full-batch gradient descent: convergence at epoch: 584
 , iteration: 584
 
-![alt text](./assets/Task1_images/image-2.png)
-![alt text](./assets/Task1_images/image-1.png)
-![alt text](./assets/Task1_images/FB.gif)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](full_batch_gradient_descent_contour-1.gif)
 
 Mini-batch gradient descent: convergence at epoch: 117
 , iteration: 936
 
-![alt text](./assets/Task1_images/image-3.png)
-![alt text](./assets/Task1_images/image-4.png)
-![alt text](./assets/Task1_images/MB.gif)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](mini_batch_gradient_descent_contour.gif)
 
 Sochastic gradient descent: convergence at epoch: 117
 , iteration: 936
 
-![alt text](./assets/Task1_images/image-5.png)
-![alt text](./assets/Task1_images/image-6.png)
-![alt text](./assets/Task1_images/S.gif)
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](stochastic_gradient_descent_contour.gif)
 
 From above observations, it can be concluded that stochastic gradient descent is the fastest followed by mini-batch gradient descent and full-batch gradient descent. This is because the number of iterations in 1 epoch of stochastic gradient descent is sample_size while it is sample_size/batch_size in mini-batch gradient descent and 1 in full-batch gradient descent.
 
 Q4.
 
-Vanilla gradient descent($\alpha$=0.01):
-convergence at epoch: 584
 
-![alt text](image.png)
-![alt text](full_batch_gradient_descent_contour.gif)
 
 Full-batch gradient descent with momentum($\alpha$=0.01,momentum factor=0.6):
 convergence at epoch: 38
 
-![alt text](image-1.png)
-![alt text](full_batch_gradient_descent_with_momentum_contour.gif)
+![alt text](image-9.png)
+![alt text](full_batch_gradient_descent_with_momentum_contour-1.gif)
 
 Stochastic gradient descent with momentum($\alpha$=0.005,momentum factor=0.6):
 convergence at epoch: 10
 
-![alt text](image-2.png)
-![alt text](stochastic_gradient_descent_with_momentum_contour.gif)
+![alt text](image-10.png)
+![alt text](stochastic_gradient_descent_with_momentum_contour-1.gif)
 
 This because momentum term averages out the step size by making step size larger in regions where gradient is shallow and make step size smaller where gradient is steep. This overall increases the convergance speed. Hence, the full-batch gradient descent with momentum implementation faster than vanilla gradient descent. Momentum implementation also prevents gradient descent stucking in local minima.
