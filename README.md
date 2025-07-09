@@ -1,11 +1,6 @@
 # ES 335 Assignment-2
 
-## Team Members (Bias Busters)
 
-1. [Shardul Junagade](https://github.com/ShardulJunagade)
-2. [Soham Gaonkar](https://github.com/Soham-Gaonkar)
-3. [Umang Shikarvar](https://github.com/Umang-Shikarvar)
-4. [Sharvari Mirge](https://github.com/msharvari31)
 
 This repository contains the code for the assignment 2 of the course ES 335: Machine Learning Fall-2024 at IIT Gandhinagar taught by Prof. Nipun Batra.
 
