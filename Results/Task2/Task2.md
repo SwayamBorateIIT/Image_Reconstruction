@@ -65,9 +65,7 @@ RMSE: 0.2578
 PSNR: 11.78 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image.png)" alt="Linear Train" width="600"/>
-</div>
+![alt text](image-1.png)
 
 #### 2. Polynomial Bias:
 - Added polynomial bias terms to the input coordinates to capture more complex relationships. This showed some improvement but was still not sufficient.
@@ -79,19 +77,14 @@ RMSE: 0.1918
 PSNR: 14.34 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-1.png)" alt="Poly 5 Train" width="600"/>
-</div>
+![alt text](image-2.png)
 
 - 10 polynomial features
 ``` python
 RMSE: 0.1734
 PSNR: 15.22 dB
 ```
-
-<div style="text-align: left;">
-  <img src="![alt text](image-2.png)" alt="Poly 10 Train" width="600"/>
-</div>
+![alt text](image-3.png)
 
 - 50 polynomial features
 ``` python
@@ -99,9 +92,7 @@ RMSE: 0.1698
 PSNR: 15.40 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-3.png)" alt="Poly 50 Train" width="600"/>
-</div>
+![alt text](image-4.png)
 
 #### 3. Using RBF Sampler (Random Fourier Features):
 - We transformed the coordinates $\( (X, Y) \)$ into a higher-dimensional space using an RBF sampler.
@@ -111,9 +102,7 @@ RMSE: 0.0576
 PSNR: 24.79 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-4.png)" alt="RFF Train" width="600"/>
-</div>
+![alt text](image-5.png)
 
 - By experimenting with different values of $\( \sigma \)$ and the number of components, we achieved significantly better results and got an idea of the relation between sigma and number of features with image quality.
 
@@ -123,41 +112,30 @@ PSNR: 24.79 dB
 RMSE: 0.3134
 PSNR: 10.08 dB
 ```
-
-<div style="text-align: left;">
-  <img src="![alt text](image-5.png)" alt="RFF 1k" width="600"/>
-</div>
+![alt text](image-6.png)
 
 ``` python
 RMSE: 0.2256
 PSNR: 12.93 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-6.png)" alt="RFF 5k" width="600"/>
-</div>
+![alt text](image-7.png)
 
 ``` python
 RMSE: 0.1089
 PSNR: 19.26 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-7.png)" alt="RFF 10k" width="600"/>
-</div>
+![alt text](image-8.png)
 
 ``` python
 RMSE: 0.0885
 PSNR: 21.06 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-8.png)" alt="RFF 15k" width="600"/>
-</div>
+![alt text](image-9.png)
 
-<div style="text-align: left;">
-  <img src="![alt text](image-9.png)" alt="RFF vs Features" width="600"/>
-</div>
+![alt text](image-10.png)
 
 #### Parameter: Sigma
 
@@ -166,32 +144,22 @@ RMSE: 0.2974
 PSNR: 10.53 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-10.png)" alt="RFF 5k 0.001" width="600"/>
-</div>
-
+![alt text](image-11.png)
 
 ``` python
 RMSE: 0.1515
 PSNR: 16.39 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-11.png)" alt="RFF 5k 0.01" width="600"/>
-</div>
-
+![alt text](image-12.png)
 ``` python
 RMSE: 0.1179
 PSNR: 18.57 dB
 ```
 
-<div style="text-align: left;">
-  <img src="![alt text](image-12.png)" alt="RFF 5k 0.1" width="600"/>
-</div>
+![alt text](image-13.png)
 
-<div style="text-align: left;">
-  <img src="![alt text](image-13.png)" alt="RFF vs Sigma" width="600"/>
-</div>
+![alt text](image-14.png)
 
 
 #### Metrics:
@@ -228,34 +196,19 @@ This task involves reconstructing a 5-second audio sample by learning the mappin
 #### 2. Loading and Analyzing Audio:
 - The audio is loaded using `librosa`, and its waveform and frequency spectrum are visualized.
 
-<div style="text-align: left;">
-  <img src="![alt text](image-14.png)" alt="RFF vs Sigma" width="600"/>
-</div>
+![alt text](image-15.png)
 
-<div style="text-align: left;">
-  <img src="![alt text](image-15.png)" alt="RFF vs Sigma" width="600"/>
-</div>
+![alt text](image-16.png)
 
-<audio controls>
-<source src="./assets/Task2_images/OriginalAudio.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
 
 #### 3. Applying RFF and Linear Regression:
 - We applied RFF to map the time $\( t \)$ to a higher-dimensional space and trained a Linear Regression model to learn the mapping from $\( t \)$ to $\( A \)$.
 
-<div style="text-align: left;">
-  <img src="![alt text](image-17.png)" alt="RFF vs Sigma" width="600"/>
-</div>
+![alt text](image-17.png)
 
-<div style="text-align: left;">
-  <img src="![alt text](image-16.png)" alt="RFF vs Sigma" width="600"/>
-</div>
+![alt text](image-18.png)
 
-<audio controls>
-<source src="./assets/Task2_images/PredictedAudio.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
+
 
 ``` python
 RMSE: 0.015551912598311901
